@@ -22,8 +22,23 @@ def euclidiana(usuario1, usuario2):
     print(usuario1 + ' X ' + usuario2)
     return f'{(1/(1 + sqrt(soma))):.2%}'
 
-print(euclidiana('Leonardo', 'Ana'))
-print(euclidiana('Marcos', 'Claudia'))
-print(euclidiana('Pedro', 'Marcos'))
-print(euclidiana('Ana', 'Pedro'))
+def getSimilares(usuario):
+    similaridade = [
+        (euclidiana(usuario, outro), outro)
+        for outro in avaliacoes if outro != usuario
+        
+    ]
+    similaridade.sort()
+    similaridade.reverse()
+
+    return similaridade
+
+
+print(getSimilares('Ana'))
+print(getSimilares('Leonardo'))
+print(getSimilares('Marcos'))
+print(getSimilares('Janaina'))
+print(getSimilares('Pedro'))
+print(getSimilares('Claudia'))
+
 f.close()
