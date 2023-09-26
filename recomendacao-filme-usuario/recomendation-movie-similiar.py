@@ -53,7 +53,6 @@ def getRecomendacoes(base, filme):
     rankings.reverse()
     return rankings
 
-print(getSimilares(avaliacoes, 'Star Wars'))
-print(getRecomendacoes(avaliacoes, 'Star Wars'))
+print(getSimilares(avaliacoes, 'O Ultimato Bourne'))
 
 f.close()
