@@ -2,7 +2,7 @@ import json
 from rich import print
 from math import sqrt
 
-f = open('busca-usuarios-similares/data.json')
+f = open('recomendacao-filme-usuario/data.json')
 
 avaliacoes = json.load(f)
 
